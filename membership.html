@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership & Login - Bon Appétit</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="index.html" class="navbar-logo">Bon Appétit</a>
+            
+            <div class="navbar-menu" id="nav-menu">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="menu.html" class="navbar-link">Menu</a></li>
+                    <li class="navbar-item"><a href="chef.html" class="navbar-link">Chef</a></li>
+                    <li class="navbar-item"><a href="branches.html" class="navbar-link">Branches</a></li>
+                    <li class="navbar-item"><a href="reservation.html" class="navbar-link">Reservation</a></li>
+                    <li class="navbar-item">
+                        <!-- This file has the "active-link" on Membership -->
+                        <a href="membership.html" class="navbar-link active-link" id="nav-membership-link">Membership</a>
+                    </li>
+
+                    <li class="navbar-item" id="nav-account-link" style="display: none;">
+                        <a href="portal.html" class="navbar-link">Account</a>
+                    </li>
+                    <li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section membership-page">
+            <h2 class="section-title">Join Our Exclusive Club</h2>
+            <div class="membership-grid container">
+                <div class="membership-card">
+                    <h3>General</h3>
+                    <span class="mem-price">৳1500 <span>/ year</span></span>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 5% discount on all orders</li>
+                        <li><i class="fas fa-check"></i> Priority waiting list</li>
+                        <li><i class="fas fa-check"></i> Birthday special gift</li>
+                        <li><i class="fas fa-times"></i> Access to VIP lounge</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" id="plan-general">Choose Plan</a>
+                </div>
+                <div class="membership-card featured">
+                    <h3>VIP</h3>
+                    <span class="mem-price">৳4500 <span>/ year</span></span>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 15% discount on all orders</li>
+                        <li><i class="fas fa-check"></i> Guaranteed reservation (24h notice)</li>
+                        <li><i class="fas fa-check"></i> Access to VIP lounge</li>
+                        <li><i class="fas fa-check"></i> Complimentary champagne on arrival</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" id="plan-vip">Choose Plan</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Executive</h3>
+                    <span class="mem-price">৳8000 <span>/ year</span></span>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 25% discount on all orders</li>
+                        <li><i class="fas fa-check"></i> Private dining room access</li>
+                        <li><i class="fas fa-check"></i> Personal concierge</li>
+                        <li><i class="fas fa-check"></i> All VIP benefits</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" id="plan-executive">Choose Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section login-register-section">
+            <div class="login-register-container container">
+                <div class="form-container">
+                    <form action="#" class="login-form" id="login-form">
+                        <h3>Member Login</h3>
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <!-- FIX: Removed autocomplete="off" to allow browser to save/remember -->
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-pass">Password</label>
+                            <!-- FIX: Removed autocomplete="off" to allow browser to save/remember -->
+                            <input type="password" id="login-pass" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+
+                <div class="form-container">
+                    <form action="#" class="login-form" id="register-form">
+                        <h3>Create Account</h3>
+                        <div class="form-group">
+                            <label for="reg-name">Full Name</label>
+                            <!-- This is correct: autocomplete="off" -->
+                            <input type="text" id="reg-name" required autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-email">Email</label>
+                            <!-- This is correct: autocomplete="off" -->
+                            <input type="email" id="reg-email" required autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-pass">Password</label>
+                            <!-- This is correct: autocomplete="new-password" -->
+                            <input type="password" id="reg-pass" required autocomplete="new-password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-section">
+                <h3 class="footer-logo">Bon Appétit</h3>
+                <p>Born from passion, served with elegance.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bon Appétit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
